@@ -3,7 +3,7 @@ Contributors: bertilow
 Tags: slugs, internationalization, i18n
 Requires at least: 2.5
 Tested up to: 2.5
-Stable tag: 0.4
+Stable tag: 0.5
 
 This plugin gives better transliteration of non-ASCII characters in slugs.
 
@@ -39,7 +39,7 @@ Instalado:
 
 == Screenshots ==
 
-1. The interface of Transliterado 0.4 / La interfaco de Transliterado 0.4
+1. The interface of Transliterado 0.5 / La interfaco de Transliterado 0.5
 
 == Licence / Licenco ==
 

@@ -4,7 +4,7 @@ Plugin Name: Transliterado
 Description: Better transliteration of non-ASCII characters in slugs. Currently covers Esperanto, Swedish, Finnish, Danish, Norwegian, German, Russian and Bulgarian, but it's easy to add new languages (contact "bertilow" at "gmail.com"). Significant parts of the code comes from the plugins Rustolat by Anton Skorobogatov, BGtoLat by Ognyan Mladenov, and Slugger by Hans Christian Saustrup. / Pli bona transliterado de ne-Askiaj literoj en URL-nomoj. Nun prizorgataj estas Esperanto, la Sveda, la Finna, la Dana, la Norvega, la Germana, la Rusa kaj la Bulgara, sed estas facile aldoni pliajn lingvojn (skribu al "bertilow" ĉe "gmail.com"). Gravaj partoj de la kodo venas el la kromprogramoj Rustolat de Anton Skorobogatov, BGtoLat de Ognyan Mladenov, kaj Slugger de Hans Christian Saustrup.
 Author: Bertilo Wennergren <bertilow@gmail.com>
 Author URI: http://bertilow.com
-Version: 0.4
+Version: 0.5
 */
 
 $transliterado_lingvoj = array(
