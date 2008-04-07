@@ -5,7 +5,7 @@ Requires at least: 2.5
 Tested up to: 2.5
 Stable tag: 0.4
 
-This plugin gives better transliteration of non-ASCII characters in slugs. Currently covers Esperanto, Swedish, Finnish, Danish, Norwegian, German, Russian and Bulgarian. / Ĉi tiu kromprogramo donas pli bonan transliteradon de ne-Askiaj literoj en URL-nomoj. Nun prizorgataj estas Esperanto, la Sveda, la Finna, la Dana, la Norvega, la Germana, la Rusa kaj la Bulgara.
+This plugin gives better transliteration of non-ASCII characters in slugs. / Ĉi tiu kromprogramo donas pli bonan transliteradon de ne-Askiaj literoj en URL-nomoj.
 
 == Description ==
 
