@@ -5,7 +5,7 @@ Requires at least: 2.5
 Tested up to: 2.5
 Stable tag: 0.4
 
-This plugin gives better transliteration of non-ASCII characters in slugs. / Ĉi tiu kromprogramo donas pli bonan transliteradon de ne-Askiaj literoj en URL-nomoj.
+This plugin gives better transliteration of non-ASCII characters in slugs.
 
 == Description ==
 
