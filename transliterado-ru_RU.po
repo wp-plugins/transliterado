@@ -5,14 +5,22 @@ msgstr ""
 "Project-Id-Version: Transliterado 0.1\n"
 "Report-Msgid-Bugs-To: bertilow@gmail.com\n"
 "POT-Creation-Date: 2008-04-01 09:24+0900\n"
-"PO-Revision-Date: 2008-04-04 17:46+0900\n"
+"PO-Revision-Date: 2008-04-23 12:51+0900\n"
 "Last-Translator: Viatcheslav Ivanov <mi@amikeco.ru>\n"
 "Language-Team: English <bertilow@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: transliterado.php:65
+#: transliterado.php:12
+msgid "Specialaj signoj"
+msgstr "Специальные символы"
+
+#: transliterado.php:13
+msgid "Simpligo de haltostrekoj kaj aliaj specialaj signoj"
+msgstr "Упрощение специальных символов"
+
+#: transliterado.php:68
 msgid ""
 "Ĉi tie vi povas elekti, kiuj transliteradaj sistemoj estu uzataj en la URL-"
 "nomoj de novaj afiŝoj kaj paĝoj. Ne elektu pli da sistemoj ol vi vere "
@@ -26,13 +34,13 @@ msgstr "Здесь вы можете выбрать системы трансл�
 msgid "La elektoj estas konservitaj."
 msgstr "Настройки сохранены."
 
-#: transliterado.php:99
+#: transliterado.php:102
 msgid ""
 "La malnovaj URL-nomoj de afiŝoj kaj paĝoj estas ŝanĝitaj laŭ tiuj elektoj."
 msgstr ""
 "Все старые адреса записей и страниц были изменены согласно этим настройкам."
 
-#: transliterado.php:111
+#: transliterado.php:114
 msgid ""
 "La malnovaj URL-nomoj de etikedoj kaj kategorioj (ankaŭ ligilo-kategorioj) "
 "estas ŝanĝitaj laŭ tiuj elektoj."
@@ -40,11 +48,11 @@ msgstr ""
 "Все старые имена тегов и рубрик (включая рубрики ссылок) были изменены "
 "согласно настройкам."
 
-#: transliterado.php:142
+#: transliterado.php:145
 msgid "Ŝanĝi malnovajn afiŝojn/paĝojn"
 msgstr "Изменить адреса старых записей и страниц"
 
-#: transliterado.php:144
+#: transliterado.php:147
 msgid ""
 "Se vi elektos <em>Ŝanĝi malnovajn afiŝojn/paĝojn</em>, estos ŝanĝitaj la URL-"
 "nomoj de ĉiuj jam publikigitaj afiŝoj kaj paĝoj laŭ la novaj elektoj. "
@@ -54,11 +62,11 @@ msgstr ""
 "опубликованных записей и страниц будут изменены согласно новым настройкам. "
 "При этом старые адреса будут по-прежнему открываться."
 
-#: transliterado.php:148
+#: transliterado.php:151
 msgid "Ŝanĝi malnovajn etikedojn/kategoriojn"
 msgstr "Изменить адреса старых тегов и рубрик"
 
-#: transliterado.php:150
+#: transliterado.php:153
 msgid ""
 "Se vi elektos <em>Ŝanĝi malnovajn etikedojn/kategoriojn</em>, estos ŝanĝitaj "
 "la URL-nomoj de ĉiuj jam ekzistantaj etikedoj kaj kategorioj (ankaŭ ligilo-"
@@ -71,6 +79,6 @@ msgstr ""
 "<strong>Старые ссылки при этом <em>перестанут работать</em></strong>. "
 "Хорошо подумайте, прежде чем выбрать эту опцию."
 
-#: transliterado.php:154
+#: transliterado.php:157
 msgid "Konservi"
 msgstr "Сохранить"

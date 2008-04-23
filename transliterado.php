@@ -4,10 +4,15 @@ Plugin Name: Transliterado
 Description: Better transliteration of non-ASCII characters in slugs. Currently covers Esperanto, Swedish, Finnish, Danish, Norwegian, German, Russian and Bulgarian, but it's easy to add new languages (contact "bertilow" at "gmail.com"). Significant parts of the code comes from the plugins Rustolat by Anton Skorobogatov, BGtoLat by Ognyan Mladenov, and Slugger by Hans Christian Saustrup. / Pli bona transliterado de ne-Askiaj literoj en URL-nomoj. Nun prizorgataj estas Esperanto, la Sveda, la Finna, la Dana, la Norvega, la Germana, la Rusa kaj la Bulgara, sed estas facile aldoni pliajn lingvojn (skribu al "bertilow" ĉe "gmail.com"). Gravaj partoj de la kodo venas el la kromprogramoj Rustolat de Anton Skorobogatov, BGtoLat de Ognyan Mladenov, kaj Slugger de Hans Christian Saustrup.
 Author: Bertilo Wennergren <bertilow@gmail.com>
 Author URI: http://bertilow.com
-Version: 0.5
+Version: 0.6
 */
 
+load_plugin_textdomain('transliterado', 'wp-content/plugins/transliterado');
 $transliterado_lingvoj = array(
+	'specialaj' => array(
+		'NOMO' => __("Specialaj signoj", "transliterado"),
+		'specialaj_surogatoj' => __("Simpligo de haltostrekoj kaj aliaj specialaj signoj", "transliterado")
+	),
 	'eo' => array(
 		'NOMO' => 'Esperanto',
 		'eo_h' => 'H-sistemo',
@@ -38,7 +43,6 @@ $transliterado_lingvoj = array(
 );
 
 $transliterado_sistemoj = array();
-load_plugin_textdomain('transliterado', 'wp-content/plugins/transliterado');
 
 function sanitize_title_transliterado($titolo) {
 	global $transliterado_lingvoj, $transliterado_sistemoj;
@@ -113,11 +117,11 @@ function transliterado_options_page() {
 		echo '</div>' . "\n";
 	}
 
-	echo '<form method="post">' . "\n";
+	echo '<form method="post" class="wp_themeSkin">' . "\n";
 	foreach (array_keys($transliterado_lingvoj) as $lingvo) {
-		echo '<fieldset class="options">' . "\n" . '<legend>';
+		echo '<fieldset class="options mceStatusbar">' . "\n" . '<legend><strong>';
 		echo $transliterado_lingvoj[$lingvo]['NOMO'];
-		echo '</legend>' . "\n";
+		echo '</strong></legend>' . "\n";
 		$elekto = get_option('transliterado_' . $lingvo);
 		echo '<select name="transliterado_' . $lingvo . '">' . "\n";
 		echo '<option value="ne"';

@@ -3,13 +3,13 @@ Contributors: bertilow
 Tags: slugs, internationalization, i18n
 Requires at least: 2.5
 Tested up to: 2.5
-Stable tag: 0.5
+Stable tag: 0.6
 
 This plugin gives better transliteration of non-ASCII characters in slugs.
 
 == Description ==
 
-This plugin gives better transliteration of non-ASCII characters in slugs. Currently covers Esperanto, Swedish, Finnish, Danish, Norwegian, German, Russian and Bulgarian.
+This plugin gives better transliteration of non-ASCII characters in slugs. Currently covers Esperanto, Swedish, Finnish, Danish, Norwegian, German, Russian and Bulgarian. It can also handle dashes.
 
 When WordPress creates slugs for the titles of posts and pages, and for tags and categories, it makes them all-ASCII, which among other things means removing diacritics (e.g. "é" becomes "e", "ö" becomes "o", "ĉ" becomes "c", etc.). For some languages the default filtering is OK, but for others it gives very bad results. The results for languages that don't even use a Latin script are especially unsatisfactory. The plugin Transliterado provides better transliteration systems for some languages. You can choose which of those systems should be used for your slugs. For some languages more than one transliteration system is available. Transliterado can also go through already existing posts and pages, and redo their slugs, if the user chooses that option. Another option does the same for tags and categories.
 
