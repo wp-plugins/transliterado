@@ -3,7 +3,7 @@ Contributors: bertilow
 Tags: slugs, internationalization, i18n
 Requires at least: 2.5
 Tested up to: 2.5
-Stable tag: 0.6
+Stable tag: 0.7
 
 This plugin gives better transliteration of non-ASCII characters in slugs.
 
@@ -49,7 +49,7 @@ Tiu ĉi kromprogramo estas publikigita sub la licenco GPL. Vi rajtas uzi ĝin se
 
 == Translations / Tradukoj ==
 
-The basic language of Transliterado is Esperanto. There are translations into English, Swedish, Finnish, German and Russian. More translations are of course welcome: "bertilow" at "gmail.com".
+The basic language of Transliterado is Esperanto. There are translations into English, Swedish, Finnish, German, Russian and Bulgarian. More translations are of course welcome: "bertilow" at "gmail.com".
 
-La baza lingvo de Transliterado estas Esperanto. Ekzistas tradukoj en la Anglan, la Svedan, la Finnan, la Germanan kaj la Rusan. Pliaj tradukoj estos bonvenaj: "bertilow" ĉe "gmail.com".
+La baza lingvo de Transliterado estas Esperanto. Ekzistas tradukoj en la Anglan, la Svedan, la Finnan, la Germanan, la Rusan kaj la Bulgaran. Pliaj tradukoj estos bonvenaj: "bertilow" ĉe "gmail.com".
 
