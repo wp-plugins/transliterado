@@ -46,6 +46,7 @@ $transliterado_sistemoj = array();
 
 function sanitize_title_transliterado($titolo) {
 	global $transliterado_lingvoj, $transliterado_sistemoj;
+	if (!$transliterado_lingvoj || !$transliterado_sistemoj) return $titolo;
 	if (!mb_check_encoding($titolo, 'ASCII')) { 
 		foreach (array_keys($transliterado_lingvoj) as $lingvo) {
 			$elekto = get_option('transliterado_' . $lingvo);
