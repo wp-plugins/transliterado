@@ -4,48 +4,57 @@ Plugin Name: Transliterado
 Description: Better transliteration of non-ASCII characters in slugs. Currently covers Esperanto, Swedish, Finnish, Danish, Norwegian, German, Russian and Bulgarian, but it's easy to add new languages (contact "bertilow" at "gmail.com"). Significant parts of the code comes from the plugins Rustolat by Anton Skorobogatov, BGtoLat by Ognyan Mladenov, and Slugger by Hans Christian Saustrup. / Pli bona transliterado de ne-Askiaj literoj en URL-nomoj. Nun prizorgataj estas Esperanto, la Sveda, la Finna, la Dana, la Norvega, la Germana, la Rusa kaj la Bulgara, sed estas facile aldoni pliajn lingvojn (skribu al "bertilow" ĉe "gmail.com"). Gravaj partoj de la kodo venas el la kromprogramoj Rustolat de Anton Skorobogatov, BGtoLat de Ognyan Mladenov, kaj Slugger de Hans Christian Saustrup.
 Author: Bertilo Wennergren <bertilow@gmail.com>
 Author URI: http://bertilow.com
-Version: 0.6
+Version: 0.8
 */
 
 load_plugin_textdomain('transliterado', 'wp-content/plugins/transliterado');
-$transliterado_lingvoj = array(
-	'specialaj' => array(
-		'NOMO' => __("Specialaj signoj", "transliterado"),
-		'specialaj_surogatoj' => __("Simpligo de haltostrekoj kaj aliaj specialaj signoj", "transliterado")
-	),
-	'eo' => array(
-		'NOMO' => 'Esperanto',
-		'eo_h' => 'H-sistemo',
-		'eo_x' => 'X-sistemo'
-	),
-	'sv' => array(
-		'NOMO' => 'Svenska, Suomi',
-		'sv_aaaeoe' => 'å, ä, ö &rarr; aa, ae, oe'
-	),
-	'da' => array(
-		'NOMO' => 'Dansk, Norsk',
-		'da_aeoeaa' => 'æ, ø, å &rarr; ae, oe, aa'
-	),
-	'de' => array(
-		'NOMO' => 'Deutsch',
-		'de_aeoeuess' => 'ä, ö, ü, ß &rarr; ae, oe, ue, ss'
-	),
-	'ru' => array(
-		'NOMO' => 'Русский',
-		'ru_gost' => 'ГОСТ 16876-71', 
-		'ru_iso' => 'ISO 9-95' 
-	),
-	'bg' => array(
-		'NOMO' => 'Български',
-		'bg_gost' => 'ГОСТ (руска)', 
-		'bg_iso' => 'ISO' 
-	)
-);
+
+$transliterado_lingvoj = populate_transliterado_lingvoj();
 
 $transliterado_sistemoj = array();
 
+function populate_transliterado_lingvoj() {
+	$transliterado_lingvoj = array(
+		'specialaj' => array(
+			'NOMO' => __("Specialaj signoj", "transliterado"),
+			'specialaj_surogatoj' => __("Simpligo de haltostrekoj kaj aliaj specialaj signoj", "transliterado")
+		),
+		'eo' => array(
+			'NOMO' => 'Esperanto',
+			'eo_h' => 'H-sistemo',
+			'eo_x' => 'X-sistemo'
+		),
+		'sv' => array(
+			'NOMO' => 'Svenska, Suomi',
+			'sv_aaaeoe' => 'å, ä, ö &rarr; aa, ae, oe'
+		),
+		'da' => array(
+			'NOMO' => 'Dansk, Norsk',
+			'da_aeoeaa' => 'æ, ø, å &rarr; ae, oe, aa'
+		),
+		'de' => array(
+			'NOMO' => 'Deutsch',
+			'de_aeoeuess' => 'ä, ö, ü, ß &rarr; ae, oe, ue, ss'
+		),
+		'ru' => array(
+			'NOMO' => 'Русский',
+			'ru_gost' => 'ГОСТ 16876-71', 
+			'ru_iso' => 'ISO 9-95' 
+		),
+		'bg' => array(
+			'NOMO' => 'Български',
+			'bg_gost' => 'ГОСТ (руска)', 
+			'bg_iso' => 'ISO' 
+		)
+	);
+	return $transliterado_lingvoj;
+}
+
 function sanitize_title_transliterado($titolo) {
 	global $transliterado_lingvoj, $transliterado_sistemoj;
+	if (!$transliterado_lingvoj) {
+		$transliterado_lingvoj = populate_transliterado_lingvoj();
+	}
 	if (!mb_check_encoding($titolo, 'ASCII')) { 
 		foreach (array_keys($transliterado_lingvoj) as $lingvo) {
 			$elekto = get_option('transliterado_' . $lingvo);
